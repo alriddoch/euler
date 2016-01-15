@@ -17,12 +17,13 @@ int main(int argc, char ** argv)
   }
 
   int sum = 0;
-  for (int cur = 1, prev = 1, next; cur < limit; next = cur + prev)
+  for (int cur = 1, prev = 1, next; cur < limit;)
   {
     if (cur % 2 == 0)
     {
       sum += cur;
     }
+    next = cur + prev;
     prev = cur;
     cur = next;
   }
