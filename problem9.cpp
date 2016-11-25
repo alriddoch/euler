@@ -20,7 +20,7 @@ int main(int argc, char ** argv)
     for (int b = 1; b < (sum - c); ++b)
     {
       int a = sum - (b + c);
-      if (a > b)
+      if (a >= b)
       {
         continue;
       }
