@@ -15,11 +15,15 @@ int main(int argc, char ** argv)
     exit(1);
   }
 
-  for (int a = 1; a <= sum; ++a)
+  for (int c = 2; c <= sum; ++c)
   {
-    for (int b = 1; b <= sum; ++b)
+    for (int b = 1; b < (sum - c); ++b)
     {
-      int c = sum - (a + b);
+      int a = sum - (b + c);
+      if (a > b)
+      {
+        continue;
+      }
       if ((a * a + b * b) == c * c)
       {
         std::cout << a << " + " << b << " + " << c << std::endl;
