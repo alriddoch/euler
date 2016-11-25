@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include <cstdint>
+
 int digit(char c)
 {
   return c - 48;
@@ -20,13 +22,13 @@ int main(int argc, char ** argv)
   }
   std::cout << digits.size() << " digits." << std::endl;
 
-  int max = 1;
-  size_t len = digits.size() - 4;
+  std::int64_t max = 1;
+  size_t len = digits.size() - 12;
   for (size_t s = 0; s < len; ++s)
   {
-    std::string sub(digits, s, 5);
-    int c = 1;
-    for (size_t i = 0; i < 5; ++i)
+    std::string sub(digits, s, 13);
+    std::int64_t c = 1;
+    for (size_t i = 0; i < 13; ++i)
     {
       c *= digit(sub[i]);
     }
